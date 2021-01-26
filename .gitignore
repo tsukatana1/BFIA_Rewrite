@@ -3,3 +3,4 @@ target
 *.wasm
 *.ts
 *.js
+.env
