@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.img-slideshow {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slideshow-item {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  -webkit-animation: cycle 20s infinite;
+          animation: cycle 20s infinite;
+  opacity: 0;
+}
+
+.slideshow-item img {
+  width: 100%;
+  height: 100%;
+  color: linear-gradient(to bottom, rgba(184, 118, 245, 0.45), rgba(135, 46, 217, 0.45));
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-animation: imgZoom 20s infinite;
+          animation: imgZoom 20s infinite;
+}
+
+.slideshow-item .slideshow-text {
+  max-width: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-family: "Poppins", sans-serif;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 5rem 5rem;
+  text-align: center;
+  border: 1px solid white;
+}
+
+.slideshow-item .slideshow-text #sl-header {
+  font-size: 17px;
+}
+
+.slideshow-item .slideshow-text p {
+  margin-bottom: 15px;
+}
+
+.slideshow-item .slideshow-text button {
+  width: 100px;
+  height: 40px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  font-size: 15px;
+  text-decoration: none;
+  color: white;
+  border: 1px solid white;
+  background: none;
+}
+
+.slideshow-item .slideshow-text button:hover {
+  background-color: white;
+  color: black;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  cursor: pointer;
+}
+
+.slideshow-item:nth-child(1),
+.slideshow-item:nth-child(1) img {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.slideshow-item:nth-child(2),
+.slideshow-item:nth-child(2) img {
+  -webkit-animation-delay: 10s;
+          animation-delay: 10s;
+}
+
+@-webkit-keyframes imgZoom {
+  100% {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+}
+
+@keyframes imgZoom {
+  100% {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+}
+
+@-webkit-keyframes cycle {
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+}
+
+@keyframes cycle {
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .slideshow-text {
+    width: 100%;
+  }
+  .slideshow-text p {
+    font-size: 18px;
+  }
+  .slideshow-text #sl-header {
+    font-size: 20px;
+  }
+}
+/*# sourceMappingURL=index.css.map */

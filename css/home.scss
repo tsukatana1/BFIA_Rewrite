@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+
+$poppins: 'Poppins', sans-serif;
+$cursive: 'Yellowtail', sans-serif;
+$fira_sans: 'Fira Sans', sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+    color: #8a20e0;
+} 
+
+nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 8vh;
+    width: 100%;
+    background-color: rgb(196, 194, 194);
+    display: flex;
+    align-items: center;
+    z-index: 4;
+    justify-content: space-around;
+
+    .logo {
+        width: 10%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: 20px;
+        justify-content: space-around;
+        
+        #bfia-logo {
+            font-family: $cursive;
+            color: rgb(228, 30, 30);
+            font-size: 18px;
+        }
+    }
+
+    .links {
+        width: 40%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        a {
+            text-decoration: none;
+            font-family: $fira_sans;
+            color: black;
+        }
+    }
+
+    .toggles {
+        button {
+            background: none;
+            outline: none;
+            border: none;
+            cursor: pointer;
+        }
+    }
+}
+
+main {
+    .fam-pic {
+        position: relative;
+        width: 100%;
+        height: 92vh;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            clip-path: polygon(0 0%, 100% 0, 100% 85%, 0% 100%);
+        }
+
+        .detail-text {
+            max-width: 50%;
+            position: absolute;
+            top: 25%;
+            left: 25%;
+            transform: translate(-25%, -25%);
+            color: white;
+            padding: 5rem 5rem;
+            
+            p {
+                font-size: 18px;
+                font-family: $poppins;
+            }
+        }
+    }
+
+    .mission {
+        margin-top: 2rem;
+        width: 100%;
+        text-align: center;
+
+        p {
+            font-size: 18px;
+            font-family: $poppins;
+        }
+
+        .on-scroll {
+            width: 700px;
+            height: 500px;
+            transform: translateY(4em) rotateZ(-5deg);
+            filter: drop-shadow(10px 10px 4px #383838);
+            object-fit: cover;
+            opacity: 0;
+            transition: transform 4s .25s cubic-belzier(0, 1, .3, 1)
+                        opacity .3s .25s ease-out;
+            will-change: transform, opacity;
+        }
+
+        .on-scroll.is-scrolled {
+            opacity: 1;
+            transform: rotateZ(-2deg);
+        }
+    }
+
+    .vision {
+        margin-top: 4rem;
+        width: 100%;
+        text-align: center;
+
+        p {
+            font-size: 18px;
+            font-family: $poppins;
+        }
+    }
+
+    .faq {
+        margin-top: 4rem;
+        width: 100%;
+        text-align: center;
+
+        p {
+            font-size: 17px;
+            font-family: $poppins;
+        }
+    }
+
+    .our-vid {
+        margin-top: 4rem;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        
+        #info-title {
+            font-size: 17px;
+            font-family: $poppins;
+        }
+
+        iframe {
+            filter: drop-shadow(10px 10px 4px #383838);
+            width: 560px;
+            height: 300px;
+        }
+    }
+
+    .contact-us {
+        margin-top: 4rem;
+        width: 100%;
+        text-align: center;
+
+        p {
+            font-size: 17px;
+            font-family: $poppins;
+        }
+    }
+}
+
+.dark {
+    transition: all .5s ease;
+    background-color: rgb(68, 67, 67);
+    .dark-change {
+        p {
+            color: white;
+
+            a {
+                color: white;
+            }
+        }
+        
+        span {
+            color: white;
+        }
+    }
+}
+
+#big-title {
+    font-weight: 250;
+    font-size: 35px;
+    font-family: $poppins;
+}
+
+#little-header {
+    font-size: 14px;
+    font-family: $poppins;
+}
+
+@media (max-width: 760px) {
+    main {
+        .mission {
+            .on-scroll {
+                width: 300px;
+                height: 300px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 760px) {
+    nav {
+        .logo {
+            display: none;
+        }
+
+        .links {
+            width: 70%;
+
+            a {
+                font-size: 20px;
+            }
+        }
+    }
+
+    main {
+        .our-vid {
+            iframe {
+                width: 300px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    main {
+        .fam-pic {
+
+            .detail-text {
+                width: 60%;
+                padding: 1rem 1rem;
+                top: 10%;
+                left: 10%;
+                transform: translate(-10%, -10%);
+
+                p {
+                    font-size: 17px;
+                    font-family: $poppins;
+                }
+            }
+        }
+    }
+}

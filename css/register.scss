@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+
+$poppins: 'Poppins', sans-serif;
+$cursive: 'Yellowtail', sans-serif;
+$fira_sans: 'Fira Sans', sans-serif;
+$dark_mode: rgb(68, 67, 67);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 8vh;
+    width: 100%;
+    background-color: rgb(196, 194, 194);
+    display: flex;
+    align-items: center;
+    z-index: 4;
+    justify-content: space-around;
+
+    .logo {
+        width: 10%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: 20px;
+        justify-content: space-around;
+        
+        #bfia-logo {
+            font-family: $cursive;
+            color: rgb(228, 30, 30);
+            font-size: 18px;
+        }
+    }
+
+    .links {
+        width: 40%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        a {
+            text-decoration: none;
+            font-family: $fira_sans;
+            color: black;
+        }
+    }
+
+    .toggles {
+        button {
+            background: none;
+            outline: none;
+            border: none;
+            cursor: pointer;
+        }
+    }
+}
+
+main {
+
+    .login-redirect {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 20vh;
+        text-align: center;
+        color: white;
+        font-family: $poppins;
+        background-color: rgb(77, 77, 224);
+        align-items: center;
+        justify-content: center;
+
+        .text {
+            font-family: $poppins;
+
+            a {
+                color: white;
+            }
+        }
+    }
+
+    .register-page {
+        width: 100%;
+        text-align: center;
+
+        form {
+            width: 100%;
+
+            .form-elements {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-family: $poppins;
+                
+                span {
+                    margin-top: 10px;
+                }
+
+                input[type="text"],
+                input[type="tel"],
+                input[type="email"],
+                input[type="password"] {
+                    width: 300px;
+                    min-width: 100px;
+                    height: 40px;
+                    border: 1px solid grey;
+                    line-height: normal;
+                    text-indent: 5px;
+
+                    &:focus {
+                        transition: border .5s ease;
+                        border: 2px solid rgb(55, 58, 58);
+                    }
+                }
+
+                textarea {
+                    display: block;
+                    overflow: hidden;
+                    resize: none;
+                    width: 400px;
+                    min-width: 100px;
+                    border: 1px solid grey;
+                    font-size: 15px;
+                    font-family: $poppins;
+                    line-height: normal;
+                    text-indent: 5px;
+
+                    span {
+                        position: absolute;
+                        transform: translate(-80%, -80%);
+                    }
+                }
+
+                label {
+                    display: inline-flex;
+                    align-items: center;
+                    cursor: pointer;
+
+                    .radio__input {
+                        display: none;
+
+                        &:checked + .radio__circle::after {
+                            transform: scale(1)
+                        }
+                    }
+    
+                    .radio__circle {
+                        width: 1.25rem;
+                        height: 1.25rem;
+                        border: 2px solid rgb(156, 156, 156);
+                        padding: 2px;
+                        border-radius: 50%;
+                        margin-right: 10px;
+                        box-sizing: border-box;
+
+                        &::after {
+                            content: "";
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 50%;
+                            background-color: rgb(228, 58, 58);
+                            transform: scale(0);
+                            transition: transform 0.3s;
+                        }
+                    }
+                }
+
+                #donate-select {
+                    border: 1px solid black;
+                    width: 300px;
+                    min-width: 100px;
+                    height: 40px;
+                    font-family: $poppins;
+
+                    &:focus {
+                        border: 1.5px solid black;
+                    }
+
+                    option {
+                        font-family: $poppins;
+                        background-color: rgb(199, 194, 194);
+                        height: 40px;
+                    }
+                }
+
+                button[type="submit"] {
+                    margin-top: 20px;
+                    width: 100px;
+                    height: 40px;
+                    background-color: rgb(82, 82, 230);
+                    font-family: $poppins;
+                    color: white;
+                    outline: none;
+                    border: none;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+.dark {
+    $light_dark: rgb(104, 102, 102);
+    .dark__change {
+        transition: all .3s ease;
+        background-color: $dark_mode;
+        color: white;
+
+        form {
+            .form-elements {
+                input[type="text"],
+                input[type="tel"],
+                input[type="email"],
+                input[type="password"] {
+                    background-color: $light_dark;
+                    color: white;
+                }
+
+                textarea {
+                    background-color: $light_dark;
+                    color: white;
+                }
+
+                select {
+                    background-color: $light_dark;
+                    color: white;
+                }
+
+                option {
+                    color: black;
+                }
+            }
+        }
+    }
+}
+
+#medium-header {
+    font-size: 18px !important;
+    user-select: none;
+}
+
+#error-footer {
+    font-size: 15px !important;
+    font-family: $poppins !important;
+    color: rgb(228, 55, 55);
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        .logo {
+            display: none;
+        }
+        .links {
+            width: 90%;
+        }
+    }
+}

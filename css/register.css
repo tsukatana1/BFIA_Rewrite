@@ -1,0 +1,301 @@
+@import url("https://fonts.googleapis.com/css2?family=Yellowtail&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 8vh;
+  width: 100%;
+  background-color: #c4c2c2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 4;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+nav .logo {
+  width: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 20px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+nav .logo #bfia-logo {
+  font-family: "Yellowtail", sans-serif;
+  color: #e41e1e;
+  font-size: 18px;
+}
+
+nav .links {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+nav .links a {
+  text-decoration: none;
+  font-family: "Fira Sans", sans-serif;
+  color: black;
+}
+
+nav .toggles button {
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+main .login-redirect {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 20vh;
+  text-align: center;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  background-color: #4d4de0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .login-redirect .text {
+  font-family: "Poppins", sans-serif;
+}
+
+main .login-redirect .text a {
+  color: white;
+}
+
+main .register-page {
+  width: 100%;
+  text-align: center;
+}
+
+main .register-page form {
+  width: 100%;
+}
+
+main .register-page form .form-elements {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Poppins", sans-serif;
+}
+
+main .register-page form .form-elements span {
+  margin-top: 10px;
+}
+
+main .register-page form .form-elements input[type="text"],
+main .register-page form .form-elements input[type="tel"],
+main .register-page form .form-elements input[type="email"],
+main .register-page form .form-elements input[type="password"] {
+  width: 300px;
+  min-width: 100px;
+  height: 40px;
+  border: 1px solid grey;
+  line-height: normal;
+  text-indent: 5px;
+}
+
+main .register-page form .form-elements input[type="text"]:focus,
+main .register-page form .form-elements input[type="tel"]:focus,
+main .register-page form .form-elements input[type="email"]:focus,
+main .register-page form .form-elements input[type="password"]:focus {
+  -webkit-transition: border .5s ease;
+  transition: border .5s ease;
+  border: 2px solid #373a3a;
+}
+
+main .register-page form .form-elements textarea {
+  display: block;
+  overflow: hidden;
+  resize: none;
+  width: 400px;
+  min-width: 100px;
+  border: 1px solid grey;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  line-height: normal;
+  text-indent: 5px;
+}
+
+main .register-page form .form-elements textarea span {
+  position: absolute;
+  -webkit-transform: translate(-80%, -80%);
+          transform: translate(-80%, -80%);
+}
+
+main .register-page form .form-elements label {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+main .register-page form .form-elements label .radio__input {
+  display: none;
+}
+
+main .register-page form .form-elements label .radio__input:checked + .radio__circle::after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+main .register-page form .form-elements label .radio__circle {
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid #9c9c9c;
+  padding: 2px;
+  border-radius: 50%;
+  margin-right: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main .register-page form .form-elements label .radio__circle::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #e43a3a;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+main .register-page form .form-elements #donate-select {
+  border: 1px solid black;
+  width: 300px;
+  min-width: 100px;
+  height: 40px;
+  font-family: "Poppins", sans-serif;
+}
+
+main .register-page form .form-elements #donate-select:focus {
+  border: 1.5px solid black;
+}
+
+main .register-page form .form-elements #donate-select option {
+  font-family: "Poppins", sans-serif;
+  background-color: #c7c2c2;
+  height: 40px;
+}
+
+main .register-page form .form-elements button[type="submit"] {
+  margin-top: 20px;
+  width: 100px;
+  height: 40px;
+  background-color: #5252e6;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.dark .dark__change {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  background-color: #444343;
+  color: white;
+}
+
+.dark .dark__change form .form-elements input[type="text"],
+.dark .dark__change form .form-elements input[type="tel"],
+.dark .dark__change form .form-elements input[type="email"],
+.dark .dark__change form .form-elements input[type="password"] {
+  background-color: #686666;
+  color: white;
+}
+
+.dark .dark__change form .form-elements textarea {
+  background-color: #686666;
+  color: white;
+}
+
+.dark .dark__change form .form-elements select {
+  background-color: #686666;
+  color: white;
+}
+
+.dark .dark__change form .form-elements option {
+  color: black;
+}
+
+#medium-header {
+  font-size: 18px !important;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#error-footer {
+  font-size: 15px !important;
+  font-family: "Poppins", sans-serif !important;
+  color: #e43737;
+}
+
+@media screen and (max-width: 768px) {
+  nav .logo {
+    display: none;
+  }
+  nav .links {
+    width: 90%;
+  }
+}
+/*# sourceMappingURL=register.css.map */

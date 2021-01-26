@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Yellowtail&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+  color: #8a20e0;
+}
+
+nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 8vh;
+  width: 100%;
+  background-color: #c4c2c2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 4;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+nav .logo {
+  width: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 20px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+nav .logo #bfia-logo {
+  font-family: "Yellowtail", sans-serif;
+  color: #e41e1e;
+  font-size: 18px;
+}
+
+nav .links {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+nav .links a {
+  text-decoration: none;
+  font-family: "Fira Sans", sans-serif;
+  color: black;
+}
+
+nav .toggles button {
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+main .fam-pic {
+  position: relative;
+  width: 100%;
+  height: 92vh;
+}
+
+main .fam-pic img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-clip-path: polygon(0 0%, 100% 0, 100% 85%, 0% 100%);
+          clip-path: polygon(0 0%, 100% 0, 100% 85%, 0% 100%);
+}
+
+main .fam-pic .detail-text {
+  max-width: 50%;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  -webkit-transform: translate(-25%, -25%);
+          transform: translate(-25%, -25%);
+  color: white;
+  padding: 5rem 5rem;
+}
+
+main .fam-pic .detail-text p {
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+}
+
+main .mission {
+  margin-top: 2rem;
+  width: 100%;
+  text-align: center;
+}
+
+main .mission p {
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+}
+
+main .mission .on-scroll {
+  width: 700px;
+  height: 500px;
+  -webkit-transform: translateY(4em) rotateZ(-5deg);
+          transform: translateY(4em) rotateZ(-5deg);
+  -webkit-filter: drop-shadow(10px 10px 4px #383838);
+          filter: drop-shadow(10px 10px 4px #383838);
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0;
+  -webkit-transition: -webkit-transform 4s 0.25s cubic-belzier(0, 1, 0.3, 1) opacity 0.3s 0.25s ease-out;
+  transition: -webkit-transform 4s 0.25s cubic-belzier(0, 1, 0.3, 1) opacity 0.3s 0.25s ease-out;
+  transition: transform 4s 0.25s cubic-belzier(0, 1, 0.3, 1) opacity 0.3s 0.25s ease-out;
+  transition: transform 4s 0.25s cubic-belzier(0, 1, 0.3, 1) opacity 0.3s 0.25s ease-out, -webkit-transform 4s 0.25s cubic-belzier(0, 1, 0.3, 1) opacity 0.3s 0.25s ease-out;
+  will-change: transform, opacity;
+}
+
+main .mission .on-scroll.is-scrolled {
+  opacity: 1;
+  -webkit-transform: rotateZ(-2deg);
+          transform: rotateZ(-2deg);
+}
+
+main .vision {
+  margin-top: 4rem;
+  width: 100%;
+  text-align: center;
+}
+
+main .vision p {
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+}
+
+main .faq {
+  margin-top: 4rem;
+  width: 100%;
+  text-align: center;
+}
+
+main .faq p {
+  font-size: 17px;
+  font-family: "Poppins", sans-serif;
+}
+
+main .our-vid {
+  margin-top: 4rem;
+  width: 100%;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .our-vid #info-title {
+  font-size: 17px;
+  font-family: "Poppins", sans-serif;
+}
+
+main .our-vid iframe {
+  -webkit-filter: drop-shadow(10px 10px 4px #383838);
+          filter: drop-shadow(10px 10px 4px #383838);
+  width: 560px;
+  height: 300px;
+}
+
+main .contact-us {
+  margin-top: 4rem;
+  width: 100%;
+  text-align: center;
+}
+
+main .contact-us p {
+  font-size: 17px;
+  font-family: "Poppins", sans-serif;
+}
+
+.dark {
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  background-color: #444343;
+}
+
+.dark .dark-change p {
+  color: white;
+}
+
+.dark .dark-change p a {
+  color: white;
+}
+
+.dark .dark-change span {
+  color: white;
+}
+
+#big-title {
+  font-weight: 250;
+  font-size: 35px;
+  font-family: "Poppins", sans-serif;
+}
+
+#little-header {
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+}
+
+@media (max-width: 760px) {
+  main .mission .on-scroll {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  nav .logo {
+    display: none;
+  }
+  nav .links {
+    width: 70%;
+  }
+  nav .links a {
+    font-size: 20px;
+  }
+  main .our-vid iframe {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  main .fam-pic .detail-text {
+    width: 60%;
+    padding: 1rem 1rem;
+    top: 10%;
+    left: 10%;
+    -webkit-transform: translate(-10%, -10%);
+            transform: translate(-10%, -10%);
+  }
+  main .fam-pic .detail-text p {
+    font-size: 17px;
+    font-family: "Poppins", sans-serif;
+  }
+}
+/*# sourceMappingURL=home.css.map */

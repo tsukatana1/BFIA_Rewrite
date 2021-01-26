@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Yellowtail&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 8vh;
+  width: 100%;
+  background-color: #c4c2c2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 4;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+nav .logo {
+  width: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 20px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+nav .logo #bfia-logo {
+  font-family: "Yellowtail", sans-serif;
+  color: #e41e1e;
+  font-size: 18px;
+}
+
+nav .links {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+nav .links a {
+  text-decoration: none;
+  font-family: "Fira Sans", sans-serif;
+  color: black;
+}
+
+nav .toggles button {
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+main .main-container {
+  width: 100%;
+  height: 70vh;
+  position: relative;
+}
+
+main .main-container .back-img {
+  width: inherit;
+  height: inherit;
+  position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main .main-container .form-container {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  -webkit-transform: translate(-20%, -20%);
+          transform: translate(-20%, -20%);
+  background-color: white;
+  padding: 4rem 4rem;
+}
+
+main .main-container .form-container .form-elements {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .main-container .form-container .form-elements span {
+  margin-bottom: 10px;
+}
+
+main .main-container .form-container .form-elements input {
+  height: 30px;
+  line-height: normal;
+  text-indent: 5px;
+}
+
+main .main-container .form-container .form-elements input:not(:nth-child(0)) {
+  margin-bottom: 15px;
+}
+
+main .main-container .form-container .form-elements #login-btn {
+  width: 100px;
+  height: 40px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  background-color: #2f2fe6;
+  color: white;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+main .main-container .form-container .form-elements a {
+  margin-top: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+main .description {
+  margin-top: 3rem;
+  width: 100%;
+  text-align: center;
+}
+
+main .description p {
+  font-size: 17px;
+  font-family: "Poppins", sans-serif;
+}
+
+.dark {
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  background-color: #444343;
+}
+
+.dark .dark-change p {
+  color: white;
+}
+
+.dark .dark-change p a {
+  color: white;
+}
+
+.dark .dark-change span {
+  color: white;
+}
+
+#mini-header {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}
+
+#big-title {
+  font-weight: 250;
+  font-size: 35px;
+  font-family: "Poppins", sans-serif;
+}
+
+@media screen and (max-width: 760px) {
+  nav {
+    width: 100%;
+  }
+  nav .logo {
+    display: none;
+  }
+  nav .links {
+    width: 70%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  main .main-container .form-container .form-elements input {
+    height: 40px;
+  }
+}
+/*# sourceMappingURL=login.css.map */

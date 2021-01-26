@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>BFIA Login Page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/css/login.css" type="text/css">
+        <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    </head>
+    <body>
+        <nav>
+            <div class="logo">
+                <span id="bfia-logo">BFIA Foundation</span>
+            </div>
+            <div class="links">
+                <a href="/">Home</a>
+                <a href="/login">Login</a>
+                <a href="#">Donate</a>
+                <a href="#">Dashboard</a>
+            </div>
+            <div class="toggles">
+                <button id="mode-toggle"><span class="iconify" data-icon="bx:bx-moon" data-inline="false"></span></button>
+            </div>
+        </nav>
+
+        <main>
+            <div class="main-container">
+                <img class="back-img" src="/css/family-child.jpg" alt="">
+                <div class="form-container dark-change">
+                    <form method="POST" action="/login">
+                        <div class="form-elements">
+                            <span id="mini-header">Login into your BFIA Account</span>
+                            <input type="text" placeholder="Username" name="username">
+                            <input type="password" placeholder="Password" name="password">
+                            <button type="submit" id="login-btn">Login</button>
+                            <br>
+                            <a href="/register">Don't have an account?</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="description dark-change">
+                <span id="big-title">Why An Account?</span>
+                <p>We need you to make an account so we can tell who donated, and to donate in the first place.</p>
+            </div>
+        </main>
+        <script type="module">
+            import init, { toggle_mode } from '/backend/pkg/backend.js';
+
+            init().then(() => {
+                document.getElementById('mode-toggle').addEventListener('click', toggle_mode())
+            })
+        </script>
+    </body>
+</html>
