@@ -1,5 +1,12 @@
 #![feature(proc_macro_hygiene, decl_macro)]
 
+/*
+    MESSAGE TO FUTURE DEVS OF THE OFFICAL BFIA WEBPAGE:
+    Please note that Rust is the best language to write a webserver is. Rust is a DDP language, which is really fast
+    and really good for large scale projects. Speed and safety is essential, and Rust provides it without much hassle.
+    Previously, it was made with express.js, but JavaScript is one of the worst languages yet.
+*/
+
 //imports
 mod structs;
 
@@ -41,6 +48,10 @@ use sqlx::{
 };
 
 use serde::{Deserialize, Serialize};
+
+use bcrypt::{hash_with_salt, DEFAULT_COST, verify};
+
+//constants
 
 //traits/implementations
 
@@ -138,9 +149,15 @@ async fn register() -> Template {
 //post routes
 
 #[post("/new_reg", data = "<user_input>")]
-async fn newuser(user_input: Form<RegisterForm>) -> Flash<Redirect> {
-    println!("{:?}", user_input);
-    Flash::success(Redirect::to("/"), "Nice job")
+async fn newuser(state: State<'_, PgPool>, user_input: Form<RegisterForm>) {
+    sqlx::query!("INSERT INTO accounts(display_name, username, real_name) VALUES($1, $2, $3)", user_input.display_name, user_input.username, user_input.real_name)
+    .execute(&mut state)
+    .await
+    .unwrap();
+    
+    /* let hashe = hash_with_salt(&user_input.passwd, DEFAULT_COST, &[
+        38, 113, 212, 141, 108, 213, 195, 166, 201, 38, 20, 13, 47, 40, 104, 18,
+    ]).unwrap().to_string(); */
 } 
 
 //errors

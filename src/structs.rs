@@ -19,14 +19,15 @@ pub struct SignedUser {
 
 #[derive(FromForm, Debug)]
 pub struct RegisterForm {
-    username: String,
-    display_name: String,
-    real_name: String,
-    email: String,
-    passwd: String,
-    telephone: String,
-    gender: String,
-    donate_i: String
+    pub username: String,
+    pub display_name: String,
+    pub real_name: String,
+    pub email: String,
+    pub passwd: String,
+    pub telephone: String,
+    pub description: String,
+    pub gender: String,
+    pub donate_i: String
 }
 
 #[derive(Debug)]

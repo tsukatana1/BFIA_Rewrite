@@ -159,17 +159,16 @@ main .register-page form .form-elements textarea {
   resize: none;
   width: 400px;
   min-width: 100px;
-  border: 1px solid grey;
+  border: 2px solid grey;
   font-size: 15px;
   font-family: "Poppins", sans-serif;
   line-height: normal;
   text-indent: 5px;
 }
 
-main .register-page form .form-elements textarea span {
-  position: absolute;
-  -webkit-transform: translate(-80%, -80%);
-          transform: translate(-80%, -80%);
+main .register-page form .form-elements #counter-span {
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
 }
 
 main .register-page form .form-elements label {

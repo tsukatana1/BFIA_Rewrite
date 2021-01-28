@@ -126,16 +126,16 @@ main {
                     resize: none;
                     width: 400px;
                     min-width: 100px;
-                    border: 1px solid grey;
+                    border: 2px solid grey;
                     font-size: 15px;
                     font-family: $poppins;
                     line-height: normal;
                     text-indent: 5px;
+                }
 
-                    span {
-                        position: absolute;
-                        transform: translate(-80%, -80%);
-                    }
+                #counter-span {
+                    font-size: 15px;
+                    font-family: $poppins;
                 }
 
                 label {

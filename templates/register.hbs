@@ -45,7 +45,7 @@
                     <span id="medium-header">Phone Number</span>
                     <input type="tel" name="telephone" id="telephone" placeholder="EX 6614590099">
                     <span id="medium-header">Description [Must follow ToS]</span>
-                    <textarea name="description" id="description" placeholder="E.X. I am a software developer at Apple"><span>Text</span></textarea>
+                    <textarea name="description" id="description" placeholder="E.X. I am a software developer at Apple" minlength="10" maxlength="200" required oninvalid="emitAlert(event)"></textarea><span id="counter-span"></span>
                     <br>
                     <br>
                     <span id="medium-header">Gender</span>
@@ -87,18 +87,32 @@
         <script type="text/javascript">
         const errorFooter = document.getElementById("error-footer");
         const textArea = document.getElementById("description");
+        const textCounter = document.getElementById("counter-span");
 
         function emitAlert(event) {
             event.preventDefault();
             errorFooter.innerText = "Please fill out all fields as required."
         }
 
-        textArea.addEventListener('input', autoResize, false);
-
-        function autoResize() {
+        function autoResize(event) {
             this.style.height = 'auto';
             this.style.height = this.scrollHeight + 'px';
+
+            const target = event.currentTarget;
+            const minLength = target.getAttribute('minlength');
+            const maxLength = target.getAttribute('maxlength');
+            const currentLength = target.value.length;
+
+            if(currentLength >= maxLength) {
+                return textCounter.innerText = 'Your description must be at most 200 characters.'
+            } else if(currentLength <= minLength) {
+                return textCounter.innerText = 'Your description must be at least 10 characters.'
+            } else {
+                return textCounter.innerText = `${currentLength}/${maxLength}` 
+            }
         }
+
+        textArea.addEventListener('input', autoResize, false);
         </script>
     </body>
 </html>
