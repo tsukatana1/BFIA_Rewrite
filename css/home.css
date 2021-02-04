@@ -6,6 +6,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -13,8 +14,7 @@ body::-webkit-scrollbar {
 }
 
 nav {
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   height: 8vh;
@@ -122,27 +122,13 @@ main .mission p {
   font-family: "Poppins", sans-serif;
 }
 
-main .mission .on-scroll {
+main .mission img {
   width: 700px;
   height: 500px;
-  -webkit-transform: translateY(4em) rotateZ(-5deg);
-          transform: translateY(4em) rotateZ(-5deg);
   -webkit-filter: drop-shadow(10px 10px 4px #383838);
           filter: drop-shadow(10px 10px 4px #383838);
   -o-object-fit: cover;
      object-fit: cover;
-  opacity: 0;
-  -webkit-transition: -webkit-transform 4s 0.25s cubic-belzier(0, 1, 0.3, 1) opacity 0.3s 0.25s ease-out;
-  transition: -webkit-transform 4s 0.25s cubic-belzier(0, 1, 0.3, 1) opacity 0.3s 0.25s ease-out;
-  transition: transform 4s 0.25s cubic-belzier(0, 1, 0.3, 1) opacity 0.3s 0.25s ease-out;
-  transition: transform 4s 0.25s cubic-belzier(0, 1, 0.3, 1) opacity 0.3s 0.25s ease-out, -webkit-transform 4s 0.25s cubic-belzier(0, 1, 0.3, 1) opacity 0.3s 0.25s ease-out;
-  will-change: transform, opacity;
-}
-
-main .mission .on-scroll.is-scrolled {
-  opacity: 1;
-  -webkit-transform: rotateZ(-2deg);
-          transform: rotateZ(-2deg);
 }
 
 main .vision {

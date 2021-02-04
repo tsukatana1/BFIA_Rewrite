@@ -154,16 +154,11 @@ main .register-page form .form-elements input[type="password"]:focus {
 }
 
 main .register-page form .form-elements textarea {
-  display: block;
-  overflow: hidden;
-  resize: none;
-  width: 400px;
-  min-width: 100px;
-  border: 2px solid grey;
-  font-size: 15px;
-  font-family: "Poppins", sans-serif;
-  line-height: normal;
   text-indent: 5px;
+  line-height: normal;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  height: 40px;
 }
 
 main .register-page form .form-elements #counter-span {

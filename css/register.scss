@@ -121,16 +121,11 @@ main {
                 }
 
                 textarea {
-                    display: block;
-                    overflow: hidden;
-                    resize: none;
-                    width: 400px;
-                    min-width: 100px;
-                    border: 2px solid grey;
-                    font-size: 15px;
-                    font-family: $poppins;
-                    line-height: normal;
                     text-indent: 5px;
+                    line-height: normal;
+                    font-family: $poppins;
+                    font-size: 15px;
+                    height: 40px;
                 }
 
                 #counter-span {

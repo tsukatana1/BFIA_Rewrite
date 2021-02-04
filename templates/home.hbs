@@ -5,6 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js" integrity="sha512-8Wy4KH0O+AuzjMm1w5QfZ5j5/y8Q/kcUktK9mPUVaUoBvh3QPUZB822W/vy7ULqri3yR8daH3F58+Y8Z08qzeg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineMax.min.js" integrity="sha512-lJDBw/vKlGO8aIZB8/6CY4lV+EMAL3qzViHid6wXjH/uDrqUl+uvfCROHXAEL0T/bgdAQHSuE68vRlcFHUdrUw==" crossorigin="anonymous"></script>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     </head>
     <body>
         <nav>
@@ -24,14 +27,14 @@
 
         <main id="main">
             <div class="fam-pic">
-                <img src="/css/family_back.jpeg" alt="">
+                <img id="fam-pic" src="/css/family_back.jpeg" alt="">
                 <div class="detail-text">
                     <span id="big-title">Welcome to BFIA®!</span>
                     <p>Welcome to the Offical Webpage of the BFIA organization. are a non-profit organization looking to help families.</p>
                 </div>
             </div>
     
-            <div class="mission dark-change">
+            <div class="mission dark-change" data-aos="fade-down">
                 <span id="big-title">Our Mission 💖</span>
                 <br>
                 <br>
@@ -41,14 +44,14 @@
                 <p>Our mission is to help redistribute wealth as we improve oppourtunites for family members in the areas of buisness incubation, the education program, and small buisness loans. Loans will be made using the Gramean Banking System. By August 31, 2022, our goal is to extend our family to 30 million (hopefully more) members.</p>
             </div>
 
-            <div class="vision dark-change">
+            <div class="vision dark-change" data-aos="fade-left">
                 <span id="big-title">Our Vision 👀</span>
                 <br>
                 <br>
                 <p>We hope that by August 31, 2021, over 5 million families have donated, and we have helped over 10 milion with basic products and nescesites.</p>
             </div>
 
-            <div class="faq dark-change">
+            <div class="faq dark-change" data-aos="fade-right">
                 <span id="big-title">FAQ ❓</span>
                 <br>
                 <span id="little-header">(This means frequently asked questions)</span>
@@ -75,7 +78,7 @@
                 <p>A: Yes. In the navbar, there is a moon icon. Click that, and that will toggle dark mode.</p>
             </div>
 
-            <div class="our-vid dark-change">
+            <div class="our-vid dark-change" data-aos="flip-left">
                 <span id="big-title">Our Video 📹</span>
                 <br>
                 <span id="info-title">Have a look at our video.</span>
@@ -94,42 +97,11 @@
         <script type="module">
             import init, { toggle_mode } from '/backend/pkg/backend.js'
 
-            function isElementInViewport(el) {
-                var rect = el.getBoundingClientRect();
-
-                return (
-                    (rect.top <= 0 
-                        && rect.bottom >= 0)
-                    ||
-                    (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) && 
-                        rect.top <= (window.innnerHeight || document.documentElement.clientHeight))
-                    ||
-                    (rect.top >= 0 &&
-                        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
-                );
-            }
-
             init().then(() => {
                 document.getElementById('mode-toggle').addEventListener('click', () => toggle_mode())
-
-                var scroll = window.requestAnimationFrame || function(callback) { window.setTimeout(callback, 1000/60) };
-
-                var elementsToShow = document.querySelectorAll('.on-scroll')
-
-                function loop() {
-                    elementsToShow.forEach(element => {
-                        if(isElementInViewport(element)) {
-                            element.classList.add('is-scrolled')
-                        } else {
-                            element.classList.remove('is-scrolled')
-                        }
-                    });
-
-                    scroll(loop);
-                }
-
-                loop()
             })
         </script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script type="text/javascript" src="/css/home.js"></script>
     </body>
 </html>

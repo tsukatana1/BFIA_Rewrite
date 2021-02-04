@@ -146,14 +146,15 @@ async fn register() -> Template {
     Template::render("register", &context)
 }
 
+
 //post routes
 
 #[post("/new_reg", data = "<user_input>")]
 async fn newuser(state: State<'_, PgPool>, user_input: Form<RegisterForm>) {
-    sqlx::query!("INSERT INTO accounts(display_name, username, real_name) VALUES($1, $2, $3)", user_input.display_name, user_input.username, user_input.real_name)
+    /* sqlx::query!("INSERT INTO accounts(display_name, username, real_name) VALUES($1, $2, $3)", user_input.display_name, user_input.username, user_input.real_name)
     .execute(&mut state)
     .await
-    .unwrap();
+    .unwrap(); */
     
     /* let hashe = hash_with_salt(&user_input.passwd, DEFAULT_COST, &[
         38, 113, 212, 141, 108, 213, 195, 166, 201, 38, 20, 13, 47, 40, 104, 18,
